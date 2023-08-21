@@ -1,5 +1,6 @@
 Introduction
 ------------
+![](https://github.com/SunXQlab/CCCbank/blob/main/CCCbank.png)
 
 To facilitate practical applications of CCC inference tools, we
 developed an integrated computational pipeline, CCCbank, that enables
@@ -9,8 +10,6 @@ databases or any other user-defined databases. CCCbank uses Seurat
 object of scRNA-seq data as input for CCC inference. The output of
 CCCbank includes inferred LR pairs and their scores, which can be used
 for further analysis or visualization.
-
-![](https://github.com/SunXQlab/CCCbank/blob/main/CCCbank.png)
 
 Installation
 ------------
@@ -79,14 +78,6 @@ Methods
 
 There are **16 CCC inference methods** implemented in CCCbank R package:
 
-<style>
-        table{
-        text-align: center;
-        }
-        .even-row {
-        background-color: rgba(240, 248, 255, 0.3);
-        }
-</style>
 <body>
 <table border="1" cellspacing="1" width="800">
 <thead>
