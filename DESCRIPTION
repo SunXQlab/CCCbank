@@ -1,0 +1,43 @@
+Package: CCCbank
+Title: Infer cell-cell communication (CCC) with any combination of 13 databases and 16 methods
+Version: 0.1.0
+Authors@R: 
+    person(given = "Jiaxin", 
+           family = "Luo", 
+           email = "luojx33@mail2.sysu.edu.cn", 
+           role = c("aut", "cre"))
+Description: CCCbank is an R package developed to infer cell-cell communication with any combination of 13 databases and 16 methods.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Imports:
+  Matrix,
+  Seurat,
+  dplyr,
+  tidyr,
+  tibble,
+  stringr,
+  data.table,
+  tidyverse,
+  devtools,
+  reticulate,
+  methods,
+  utils,
+  stats
+Suggests:
+  celltalker,
+  Connectome,
+  icellnet,
+  iTALK,
+  SingleCellSignalR,
+  CellChat,
+  RNAMagnet,
+  scSeqComm,
+  nichenetr,
+  CytoTalk,
+  scMLnet,
+  domino,
+  BiocManager,
+  Biobase,
+  Rmagic,
+  biomaRt
