@@ -380,3 +380,11 @@ There are **13 built-in LR prior databases** in CCCbank R package:
 -   DominoDB
 -   CellCallDB
 -   CytoTalkDB
+
+
+Citation
+------------
+
+Please cite CCCbank with the following reference:
+
+Luo J, Deng M, Zhang X, Sun X*. ESICCC as a systematic computational framework for evaluation, selection and integration of cell-cell communication inference methods. Genome Research. 2023. doi: 10.1101/gr.278001.123
