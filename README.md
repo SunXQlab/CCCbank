@@ -42,12 +42,12 @@ Note that if using built-in LR prior databases, species is only ‘human’.
     # run CellChat method with the combination of CellPhoneDBLR and FANTOM5 
     # as LR prior database to infer CCC.
     result <- CCCbank(ser = ser, method = 'CellChat', species = 'human', 
-                      databases = c('CellPhoneDBLR', 'FAMTOM5'), extension = FALSE)
+                      databases = c('CellPhoneDBLR', 'FANTOM5'), extension = FALSE)
 
     # run CellChat method with the combination of CellPhoneDBLR, FANTOM5 
     # and defualt LR prior database of CellChat as LR prior database
     result <- CCCbank(ser = ser, method = 'CellChat', species = 'human', 
-                      databases = c('CellPhoneDBLR', 'FAMTOM5'), extension = TRUE)
+                      databases = c('CellPhoneDBLR', 'FANTOM5'), extension = TRUE)
 
 Run CCC inference methods with user-defined databases.
 
