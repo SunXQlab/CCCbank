@@ -1018,7 +1018,7 @@ RunCytoTalk <- function(ser, species = NULL, priorDatabase = NULL, celltypes = N
     
     fpath.meta <- paste0(input_fpath,"metadata.csv")
     if(!file.exists(fpath.meta)){
-      meta.data <- cbind(rownames(ser@meta.data), ser@meta.data$celltype)  
+      meta.data <- data.frame(rownames(ser@meta.data), ser@meta.data$celltype)  
       meta.data <- as.matrix(meta.data)
       write.csv(meta.data, fpath.meta, quote=F, row.names = FALSE)
     }
@@ -1055,7 +1055,7 @@ RunCytoTalk <- function(ser, species = NULL, priorDatabase = NULL, celltypes = N
   }else{
     message(paste0(paste0(celltypes, collapse = ','), ' are used to infer CCC!'))
   }
-  
+  celltypes = as.character(celltypes)
   comb <- combn(celltypes, 2)
   comb <- t(comb)
   comb <- as.data.frame(comb)
@@ -1075,7 +1075,8 @@ RunCytoTalk <- function(ser, species = NULL, priorDatabase = NULL, celltypes = N
   result <- lapply(result, function(res){res$pcst$final_network})
   result <- do.call(rbind, result)
   
-  if(species=='human'){
+  if(!is.null(result){
+    if(species=='human'){
     result$node1 <- toupper(result$node1)
     result$node2 <- toupper(result$node2)
     result$node1 <- gsub("ORF", "orf", result$node1)
@@ -1085,6 +1086,10 @@ RunCytoTalk <- function(ser, species = NULL, priorDatabase = NULL, celltypes = N
   result$all <- paste(result$Sender, result$Ligand, result$Receiver, result$Receptor, sep = '_')
   result <- dplyr::distinct(result, all, .keep_all = TRUE)
   rownames(result) <- NULL
+  }else{
+    result <- NA
+    message('No ligand-receptor interactions were inferred!')
+  }
   
   return(result)
 }
